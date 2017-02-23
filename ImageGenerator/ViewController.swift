@@ -9,17 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var newImageButtonAction: UIBarButtonItem!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Image Generator"
+        generateNewImage()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func generateNewImage() {
+        let image = Renderer.generateRandomImage(width: Int(view.frame.width), height: Int(view.frame.height))
+        imageView.image = image
     }
-
-
+    
+    @IBAction func newImageButtonAction(_ sender: UIBarButtonItem) {
+        generateNewImage()
+    }
+    
 }
 

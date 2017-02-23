@@ -14,6 +14,7 @@
 		3D1DE0401E5EF1E300768D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE03E1E5EF1E300768D97 /* LaunchScreen.storyboard */; };
 		3D1DE04B1E5EF1E300768D97 /* ImageGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE04A1E5EF1E300768D97 /* ImageGeneratorTests.swift */; };
 		3D1DE0561E5EF1E300768D97 /* ImageGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE0551E5EF1E300768D97 /* ImageGeneratorUITests.swift */; };
+		3D1DE0641E5EF20500768D97 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE0631E5EF20500768D97 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D1DE0511E5EF1E300768D97 /* ImageGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1DE0551E5EF1E300768D97 /* ImageGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorUITests.swift; sourceTree = "<group>"; };
 		3D1DE0571E5EF1E300768D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1DE0631E5EF20500768D97 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		3D1DE0341E5EF1E300768D97 /* ImageGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				3D1DE0651E5EF33900768D97 /* Base */,
 				3D1DE0351E5EF1E300768D97 /* AppDelegate.swift */,
 				3D1DE0371E5EF1E300768D97 /* ViewController.swift */,
-				3D1DE0391E5EF1E300768D97 /* Main.storyboard */,
-				3D1DE03C1E5EF1E300768D97 /* Assets.xcassets */,
-				3D1DE03E1E5EF1E300768D97 /* LaunchScreen.storyboard */,
-				3D1DE0411E5EF1E300768D97 /* Info.plist */,
+				3D1DE0631E5EF20500768D97 /* Renderer.swift */,
 			);
 			path = ImageGenerator;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				3D1DE0571E5EF1E300768D97 /* Info.plist */,
 			);
 			path = ImageGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		3D1DE0651E5EF33900768D97 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3D1DE0391E5EF1E300768D97 /* Main.storyboard */,
+				3D1DE03C1E5EF1E300768D97 /* Assets.xcassets */,
+				3D1DE03E1E5EF1E300768D97 /* LaunchScreen.storyboard */,
+				3D1DE0411E5EF1E300768D97 /* Info.plist */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1DE0381E5EF1E300768D97 /* ViewController.swift in Sources */,
+				3D1DE0641E5EF20500768D97 /* Renderer.swift in Sources */,
 				3D1DE0361E5EF1E300768D97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
