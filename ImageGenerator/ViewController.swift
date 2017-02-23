@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     }
     
     func generateNewImage() {
-        let image = Renderer.generateRandomImage(width: Int(view.frame.width), height: Int(view.frame.height))
+        let coefficient: CGFloat = 1.0 / 50.0
+        let image = Renderer.generateRandomImage(width: Int(view.frame.width * coefficient), height: Int(view.frame.height * coefficient))
         imageView.image = image
     }
     
