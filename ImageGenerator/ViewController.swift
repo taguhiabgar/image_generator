@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    static var colorCollection = Colors.allColorsCollection
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var newImageButtonAction: UIBarButtonItem!
     
@@ -21,8 +23,15 @@ class ViewController: UIViewController {
     
     func generateNewImage() {
         let coefficient: CGFloat = 1.0 / 50.0
-        let image = Renderer.generateRandomImage(width: Int(view.frame.width * coefficient), height: Int(view.frame.height * coefficient))
-        imageView.image = image
+        let width = Int(view.frame.width * coefficient)
+        let height = Int(view.frame.height * coefficient)
+        
+        if ViewController.colorCollection.key == "all" {
+            imageView.image = Renderer.generateRandomImage(width: width, height: height)
+        } else {
+            let colors = ViewController.colorCollection.colors
+            imageView.image = Renderer.generateRandomImage(using: colors, width: width, height: height)
+        }
     }
     
     @IBAction func newImageButtonAction(_ sender: UIBarButtonItem) {

@@ -15,6 +15,8 @@
 		3D1DE04B1E5EF1E300768D97 /* ImageGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE04A1E5EF1E300768D97 /* ImageGeneratorTests.swift */; };
 		3D1DE0561E5EF1E300768D97 /* ImageGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE0551E5EF1E300768D97 /* ImageGeneratorUITests.swift */; };
 		3D1DE0641E5EF20500768D97 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE0631E5EF20500768D97 /* Renderer.swift */; };
+		3D7A80FC1E605108006DFA97 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A80FB1E605108006DFA97 /* Colors.swift */; };
+		3D7A80FE1E605795006DFA97 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A80FD1E605795006DFA97 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3D1DE0551E5EF1E300768D97 /* ImageGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorUITests.swift; sourceTree = "<group>"; };
 		3D1DE0571E5EF1E300768D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1DE0631E5EF20500768D97 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		3D7A80FB1E605108006DFA97 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3D7A80FD1E605795006DFA97 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3D1DE0351E5EF1E300768D97 /* AppDelegate.swift */,
 				3D1DE0371E5EF1E300768D97 /* ViewController.swift */,
 				3D1DE0631E5EF20500768D97 /* Renderer.swift */,
+				3D7A80FB1E605108006DFA97 /* Colors.swift */,
+				3D7A80FD1E605795006DFA97 /* SettingsViewController.swift */,
 			);
 			path = ImageGenerator;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1DE0381E5EF1E300768D97 /* ViewController.swift in Sources */,
+				3D7A80FC1E605108006DFA97 /* Colors.swift in Sources */,
 				3D1DE0641E5EF20500768D97 /* Renderer.swift in Sources */,
+				3D7A80FE1E605795006DFA97 /* SettingsViewController.swift in Sources */,
 				3D1DE0361E5EF1E300768D97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +534,7 @@
 				3D1DE05C1E5EF1E300768D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1DE05D1E5EF1E300768D97 /* Build configuration list for PBXNativeTarget "ImageGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +543,7 @@
 				3D1DE05F1E5EF1E300768D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1DE0601E5EF1E300768D97 /* Build configuration list for PBXNativeTarget "ImageGeneratorUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +552,7 @@
 				3D1DE0621E5EF1E300768D97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

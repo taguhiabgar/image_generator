@@ -34,9 +34,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="45K-iG-LlY">
-                        <barButtonItem key="rightBarButtonItem" title="New Image" id="ydc-A0-sIy">
+                        <barButtonItem key="leftBarButtonItem" title="New Image" id="ydc-A0-sIy">
                             <connections>
                                 <action selector="newImageButtonAction:" destination="BYZ-38-t0r" id="4sL-Lh-DaD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Zqv-wT-j4D">
+                            <connections>
+                                <segue destination="jzH-gH-sTt" kind="show" id="fWC-fU-OZn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,6 +53,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="TvD-FP-QGE">
+            <objects>
+                <viewController id="jzH-gH-sTt" customClass="SettingsViewController" customModule="ImageGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RGg-3T-YiM"/>
+                        <viewControllerLayoutGuide type="bottom" id="SOn-HC-H8Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W5P-Bg-1q2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-x7-uDS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jzH-gH-sTt" id="L8S-Oc-mIF"/>
+                                    <outlet property="delegate" destination="jzH-gH-sTt" id="dLc-HD-oAY"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ufl-x7-uDS" firstAttribute="leading" secondItem="W5P-Bg-1q2" secondAttribute="leading" id="PeC-c9-3wk"/>
+                            <constraint firstItem="Ufl-x7-uDS" firstAttribute="top" secondItem="RGg-3T-YiM" secondAttribute="bottom" id="SQe-Eg-7fS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufl-x7-uDS" secondAttribute="trailing" id="fDy-PJ-1w0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Ufl-x7-uDS" id="5UY-Xs-ynk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZd-es-DFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2H-tl-gu4">

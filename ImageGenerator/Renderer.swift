@@ -18,9 +18,39 @@ struct RGBColor {
 class Renderer {
     
     public static func generateRandomImage(width: Int, height: Int) -> UIImage? {
-        return imageFromPixelData(pixels: Renderer.randomPixelData(width: width, height: height), width: width, height: height)
+        let pixels = Renderer.randomPixelData(width: width, height: height)
+        return imageFromPixelData(pixels: pixels, width: width, height: height)
     }
     
+    public static func generateRandomImage(using colors: [UIColor], width: Int, height: Int) -> UIImage? {
+        let pixels = Renderer.randomPixelData(with: colors, width: width, height: height)
+        return imageFromPixelData(pixels: pixels, width: width, height: height)
+    }
+    
+    // generates random pixel data using only given colors
+    private static func randomPixelData(with colors: [UIColor], width: Int, height: Int) -> [RGBColor] {
+        var data = [RGBColor]()
+        for _ in 0..<width * height {
+            let randomIndex = Int(arc4random()) % colors.count
+            let cgFloatComponents = colors[randomIndex].cgColor.components
+            var uint8Components = [UInt8]()
+            if cgFloatComponents?.count == 4 {
+                for item in cgFloatComponents! {
+                    let intItem = item * 255.0
+                    uint8Components.append(UInt8(intItem))
+                }
+                let r = uint8Components[0]
+                let g = uint8Components[1]
+                let b = uint8Components[2]
+                let a = uint8Components[3]
+                let pixel = RGBColor(alpha: UInt8(a), red: UInt8(r), green: UInt8(g), blue: UInt8(b))
+                data.append(pixel)
+            }
+        }
+        return data
+    }
+    
+    // generates random pixel data using all colors
     private static func randomPixelData(width: Int, height: Int) -> [RGBColor] {
         var data = [RGBColor]()
         for _ in 0..<width * height {
