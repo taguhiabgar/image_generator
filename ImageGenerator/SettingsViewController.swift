@@ -19,6 +19,8 @@ class SettingsViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         fillPickerData()
+        let index = UserDefaults.standard.value(forKey: currentCollectionKey) as? Int ?? 0
+        pickerView.selectRow(index, inComponent: 0, animated: false)
     }
     
     private func fillPickerData() {
@@ -47,7 +49,7 @@ extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         for item in Colors.collections {
             if item.key == pickerData[row] {
-                ViewController.colorCollection = item
+                UserDefaults.standard.setValue(row, forKey: currentCollectionKey)
                 break
             }
         }
